@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello World</title>
+	<link rel="stylesheet" href="/style">
+</head>
+<body>
+	<div id="container">
+		<p id="title">Hello __HELLO__ !</p>
+		<form id="form" method="POST">
+			<input id="form-name" type="text" name="name" placeholder="Your Name" />
+			<input id="form-submit" type="submit" value="Submit">
+		</form>
+		<p>Current server time: <span id="time"></span></p>
+		<p>Random number: <span id="random"></span></p>
+	</div>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		var timeSpan = $("#time");
+		var randomSpan = $("#random");
+		setInterval(function() {
+			$.get("/info?type=time", function(data) {
+				timeSpan.html(data);
+			});
+			$.get("/info?type=random", function(data) {
+				randomSpan.html(data);
+			});
+		}, 2000);
+	</script>
+</body>
+</html>

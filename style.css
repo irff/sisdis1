@@ -1,0 +1,60 @@
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body {
+	background: url(/background);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#container {
+	width: 70%;
+	border-style: solid;
+	border-color: black;
+	border-radius: 4px;
+	box-shadow: 4px 4px 2px 2px rgba(0, 0, 0, 0.3);
+	background: rgba(0, 0, 0, 0.5);
+	color: white;
+	text-align: center;
+}
+
+#title {
+	font-size: 30px;
+}
+
+#form {
+	margin: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#form > input[type="text"] {
+	width: 100%;
+}
+
+#form-name {
+	padding: 10px;
+	height: 25px;
+	border: none;
+}
+
+#form-submit {
+	padding: 10px;
+	height: 45px;
+	border: none;
+
+	color: #ffffff;
+	font-size: 20px;
+	background: #5a6a75;
+}
+
+#form-submit:hover {
+	background: #3cb0fd;
+}
